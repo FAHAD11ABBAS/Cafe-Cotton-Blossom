@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Guide - Café Cotton Blossom</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            padding: 2rem;
+            background-color: white;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .guide-section {
+            margin-bottom: 3rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 2rem;
+            page-break-inside: avoid;
+        }
+
+        .guide-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-primary);
+        }
+
+        .code-block {
+            background: #f4f4f4;
+            padding: 1rem;
+            border-radius: 5px;
+            font-family: monospace;
+            margin-top: 0.5rem;
+        }
+
+        @media print {
+            .no-print {
+                display: none;
+            }
+
+            body {
+                padding: 0;
+            }
+
+            .guide-section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div style="text-align: right; margin-bottom: 1rem;" class="no-print">
+            <button onclick="window.print()" class="btn btn-primary"
+                style="background-color: #4B3621; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+                <i class="fas fa-file-pdf"></i> Save as PDF
+            </button>
+        </div>
+
+        <header style="text-align: center; margin-bottom: 3rem;">
+            <h1>Café Cotton Blossom - Style Guide</h1>
+            <p>Visual Identity & Design System</p>
+        </header>
+
+        <!-- Logos -->
+        <section class="guide-section">
+            <h2 class="guide-title">1. Logo & Favicon</h2>
+            <div
+                style="display: flex; gap: 2rem; align-items: center; background: #eee; padding: 2rem; border-radius: 10px;">
+                <div style="text-align: center;">
+                    <img src="assets/img/logo-dark.png" alt="Dark Logo" style="height: 80px; margin-bottom: 1rem;">
+                    <p><strong>Dark Version</strong><br>(For light backgrounds)</p>
+                </div>
+                <div style="text-align: center; background: #333; padding: 1rem; border-radius: 10px; color: white;">
+                    <img src="assets/img/logo-light.png" alt="Light Logo" style="height: 80px; margin-bottom: 1rem;">
+                    <p><strong>Light Version</strong><br>(For dark backgrounds)</p>
+                </div>
+                <div style="text-align: center;">
+                    <img src="assets/img/favicon.png" alt="Favicon" style="height: 32px; margin-bottom: 1rem;">
+                    <p><strong>Favicon</strong><br>(16x16 / 32x32)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Colors -->
+        <section class="guide-section">
+            <h2 class="guide-title">2. Color Palette</h2>
+            <div class="color-palette">
+                <div class="color-swatch swatch-primary">
+                    <span>Primary</span>
+                    <span>#4B3621</span>
+                </div>
+                <div class="color-swatch swatch-secondary">
+                    <span>Secondary</span>
+                    <span>#FFD1DC</span>
+                </div>
+                <div class="color-swatch swatch-accent">
+                    <span>Accent</span>
+                    <span>#FDFD96</span>
+                </div>
+                <div class="color-swatch swatch-bg">
+                    <span>Background</span>
+                    <span>#FFF9FA</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography -->
+        <section class="guide-section typography-sample">
+            <h2 class="guide-title">3. Typography</h2>
+
+            <div style="margin-bottom: 2rem;">
+                <h3>Headings (Playfair Display)</h3>
+                <h1>Heading 1 - The quick brown fox</h1>
+                <h2>Heading 2 - The quick brown fox</h2>
+                <h3>Heading 3 - The quick brown fox</h3>
+            </div>
+
+            <div>
+                <h3>Body Text (Quicksand)</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.</p>
+                <p><strong>Bold Text</strong> | <em>Italic Text</em> | <a href="#">Link Text</a></p>
+            </div>
+        </section>
+
+        <!-- Icons -->
+        <section class="guide-section">
+            <h2 class="guide-title">4. Iconography</h2>
+            <p>We use <strong>Font Awesome</strong> for our icons. Examples:</p>
+            <div style="font-size: 2rem; display: flex; gap: 2rem; margin-top: 1rem; color: var(--color-primary);">
+                <div style="text-align: center;">
+                    <i class="fas fa-coffee"></i>
+                    <p style="font-size: 1rem;">Coffee</p>
+                </div>
+                <div style="text-align: center;">
+                    <i class="fas fa-stroopwafel"></i>
+                    <p style="font-size: 1rem;">Waffle</p>
+                </div>
+                <div style="text-align: center;">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p style="font-size: 1rem;">Location</p>
+                </div>
+                <div style="text-align: center;">
+                    <i class="fab fa-instagram"></i>
+                    <p style="font-size: 1rem;">Social</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buttons -->
+        <section class="guide-section">
+            <h2 class="guide-title">5. UI Elements</h2>
+            <h3>Buttons</h3>
+            <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                <button class="btn btn-primary">Primary Button</button>
+                <button class="btn btn-secondary">Secondary Button</button>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        // Auto-print instruction or button could be added here
+        console.log("Style Guide Loaded");
+    </script>
+</body>
+
+</html>
